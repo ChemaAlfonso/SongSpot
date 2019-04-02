@@ -1,0 +1,25 @@
+<div class="card-columns my-5 animated fadeIn">
+
+  <div (click)="verArtista( item )" *ngFor="let item of items" class="card puntero">
+    <img [src]="item.images | noimage" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{ item.name }}</h5>
+      <p class="card-text"><span *ngFor="let artist of item.artists" class="badge badge-pill badge-primary">{{ artist.name }}</span></p>
+      <p class="card-text"><span *ngFor="let genre of item.genres" class="badge badge-pill badge-primary">{{ genre }}</span></p>
+     </div>
+  </div>
+  
+</div>
+
+<!--
+<div class="card-columns my-5">
+
+    <div *ngFor="let result of results" class="card">
+      <img [src]="result.images | noimage" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{ result.name }}</h5>
+        <p class="card-text"><span *ngFor="let genre of result.genres" class="badge badge-pill badge-primary">{{ genre }}</span></p>
+      </div>
+    </div>
+    
+  </div>-->

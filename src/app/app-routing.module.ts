@@ -10,7 +10,7 @@ import { ErrorComponent } from './components/shared/error/error.component';
 const ROUTES: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'search', component: SearchComponent },
-  {path: 'artista', component: ArtistaComponent },
+  {path: 'artist/:id', component: ArtistaComponent },
   {path: '', pathMatch: 'full', redirectTo: 'home' },
   {path: '**', component: ErrorComponent }
   

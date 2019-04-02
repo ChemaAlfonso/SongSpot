@@ -1,11 +1,6 @@
-<div class="card-columns">
-
-  <div *ngFor="let release of newReleases" class="card">
-    <img src="{{ release.images[0].url }}" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">{{ release.name }}</h5>
-      <p class="card-text"><span *ngFor="let artist of release.artists" class="badge badge-pill badge-primary">{{ artist.name }}</span></p>
-    </div>
-  </div>
-  
+<div *ngIf="error" class="alert alert-primary mb-5 animated fadeIn" role="alert">
+    <h2>Error - {{ mensajeStatus }}</h2>
+    <p>{{ mensajeError }}</p>
 </div>
+<app-loading *ngIf="loading" ></app-loading>
+<app-tarjeta [items]="newReleases" ></app-tarjeta>
